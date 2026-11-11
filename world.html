@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>SANDIKALE PLAYGROUND — WORLD VIEW</title>
+<link rel="stylesheet" href="world.css">
+</head>
+<body>
+<main class="game-shell">
+  <header class="hud-top"><a href="index.html" class="brand">SANDIKALE<span> / WORLD 01</span></a><div class="world-status"><i></i> WORLD ONLINE <b>•</b> SOLO MODE</div><button id="helpButton" class="hud-button">CONTROLS ?</button></header>
+  <section class="viewport" aria-label="Tampilan dunia game sudut pandang orang pertama">
+    <canvas id="world" width="400" height="240"></canvas>
+    <div class="crosshair" aria-hidden="true"></div>
+    <div class="scene-label"><span id="zoneName">SANDIKALE PLAZA</span><small>FIRST-PERSON VIEW / NO AVATAR</small></div>
+    <div class="interact-hint" id="interactHint">DEKATI CUSTOM LAB</div>
+    <div class="mobile-look">GESER LAYAR UNTUK MELIHAT SEKITAR</div>
+  </section>
+  <section class="game-bottom">
+    <div class="mission"><small>YOUR OBJECTIVE</small><strong id="objective">JELAJAHI PLAZA DAN TEMUKAN CUSTOM LAB</strong></div>
+    <div class="controls">
+      <div class="move-pad">
+        <button data-move="forward" aria-label="Maju">▲</button>
+        <div><button data-move="left" aria-label="Kiri">◀</button><button data-move="back" aria-label="Mundur">▼</button><button data-move="right" aria-label="Kanan">▶</button></div>
+      </div>
+      <button id="actionButton" class="action-button" disabled>INTERACT ↗</button>
+    </div>
+    <div class="footer-note">WASD / ARROW KEYS • DRAG TO LOOK • LIGHTWEIGHT MODE</div>
+  </section>
+</main>
+<div class="modal-backdrop" id="helpModal" hidden><section class="modal"><button class="close" data-close="helpModal">×</button><small>HOW TO PLAY</small><h2>EXPLORE<br>THE WORLD.</h2><p>Jelajahi area dari sudut pandang kamera. Tidak ada karakter yang ditampilkan.</p><ul><li>WASD / tombol arah: bergerak</li><li>Geser layar atau mouse: lihat sekitar</li><li>Dekati gerbang CUSTOM LAB lalu tekan INTERACT</li></ul><button class="solid close" data-close="helpModal">LET'S PLAY</button></section></div>
+<div class="modal-backdrop" id="labModal" hidden><section class="modal lab-modal"><button class="close" data-close="labModal">×</button><small>STATION 01 / CUSTOM LAB</small><h2>BUILD YOUR<br>OWN TEE.</h2><p>Pilih warna dan tulis ide desainmu. Preview ringan dibuat langsung di browser.</p><div class="swatches"><button data-color="#222222" data-label="BLACK" class="selected" aria-label="Hitam"></button><button data-color="#e9e5da" data-label="BONE" aria-label="Bone"></button><button data-color="#a8322c" data-label="RED" aria-label="Merah"></button><button data-color="#294236" data-label="FOREST" aria-label="Hijau"></button></div><label for="shirtText">TEKS DESAIN</label><input id="shirtText" maxlength="18" value="SANDIKALE"><div class="mini-preview"><div class="tee" id="tee"><span id="teeText">SANDIKALE</span></div></div><button id="backToWorld" class="solid">BACK TO WORLD</button></section></div>
+<script src="world.js"></script>
+</body></html>
