@@ -36,8 +36,6 @@ jobs:
           ref: playground-rework
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - name: Upload static Playground
         uses: actions/upload-pages-artifact@v3
         with:
